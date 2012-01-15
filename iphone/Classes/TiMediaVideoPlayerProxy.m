@@ -554,7 +554,7 @@ NSArray* moviePlayerKeys = nil;
 -(NSNumber*)currentPlaybackTime
 {
 	if (movie != nil) {
-		return NUMDOUBLE(1000.0f * [[self player] currentPlaybackTime]);
+		return NUMDOUBLE([[self player] currentPlaybackTime]);
 	}
 	else {
 		return NUMINT(0);
