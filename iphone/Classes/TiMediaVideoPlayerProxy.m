@@ -561,6 +561,11 @@ NSArray* moviePlayerKeys = nil;
 	}
 }
 
+-(void)setCurrentPlaybackTime:(id)value
+{
+	[self player].currentPlaybackTime=[TiUtils doubleValue:value];
+}
+
 -(NSNumber*)endPlaybackTime
 {
 	if (movie != nil) {
