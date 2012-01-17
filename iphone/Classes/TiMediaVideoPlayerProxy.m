@@ -242,7 +242,7 @@ NSArray* moviePlayerKeys = nil;
         if (n == -1) {
             n = NAN;
         }
-		return NUMDOUBLE(1000.0f * n);
+		return NUMDOUBLE(n);
 	}
 	else {
 		RETURN_FROM_LOAD_PROPERTIES(@"initialPlaybackTime", NUMINT(0));
@@ -534,7 +534,7 @@ NSArray* moviePlayerKeys = nil;
 -(NSNumber*)playableDuration
 {
 	if (movie != nil) {
-		return NUMDOUBLE(1000.0f * [[self player] playableDuration]);
+		return NUMDOUBLE([[self player] playableDuration]);
 	}
 	else {
 		return NUMINT(0);
@@ -544,7 +544,7 @@ NSArray* moviePlayerKeys = nil;
 -(NSNumber*)duration
 {
 	if (movie != nil) {
-		return NUMDOUBLE(1000.0f * [[self player] duration]);
+		return NUMDOUBLE([[self player] duration]);
 	}
 	else {
 		return NUMINT(0);
@@ -573,7 +573,7 @@ NSArray* moviePlayerKeys = nil;
         if (n == -1) {
             n = NAN;
         }
-		return NUMDOUBLE(1000.0f * n);
+		return NUMDOUBLE(n);
 	} else {
 		return NUMINT(0);
 	}
